@@ -152,7 +152,7 @@ public class DepartmentController implements Serializable{
 			System.out.println("插入失败");
 		}
 		
-	return "redirect:/department/list.do";	
+	return "redirect:/user/listjson1.do";
 	}
 	
 	
@@ -182,7 +182,8 @@ public class DepartmentController implements Serializable{
 		dep.setState(2);
 		dep.setOverip(GetIp.getIpAddr(request));
 		try {
-			departmentService.updateByPrimaryKeySelective(dep);
+			//departmentService.updateByPrimaryKeySelective(dep);
+			departmentService.deleteByPrimaryKey(dep.getId());
 			map.put("code",1);
 		} catch (Exception e) {
 			System.out.println("删除失败");

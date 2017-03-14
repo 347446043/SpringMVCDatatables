@@ -192,7 +192,7 @@ div.dataTables_paginate {
                                 新 增
                             </h4>
                         </div>
-                        <form class="form-horizontal" role="form" action="/category_add" method="post"  id="category_add">
+                        <form class="form-horizontal" role="form" action="${pageContext.request.contextPath}/department/save.do" method="post"  id="category_add">
                             <div class="modal-body">
                             <%-- 
                                 <div class="form-group">
@@ -247,7 +247,7 @@ div.dataTables_paginate {
                                 <button type="button" class="btn btn-default"
                                         data-dismiss="modal">关闭
                                 </button>
-                                <button type="button" class="btn btn-primary" id="btnsubmit">
+                                <button type="submit" class="btn btn-primary" id="btnsubmit">
                                     提交
                                 </button>
                             </div>
